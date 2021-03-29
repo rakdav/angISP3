@@ -65,5 +65,4 @@ class Item{
         '</div>'
 })
 export class AppComponent{
-
 }
