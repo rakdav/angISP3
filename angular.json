@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "projects": {
+    "firstanguler": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "styl"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/firstanguler",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "aot": true
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "firstanguler:build"
+          }
+        }
+      },
+      "defaultProject": "firstanguler"
+    }
+  }
+}
